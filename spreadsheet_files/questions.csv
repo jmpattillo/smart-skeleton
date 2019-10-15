@@ -1,0 +1,11 @@
+﻿ID,Question,muscle code,Correct,isAlternate,Alternate value,Feedback Correct,Feedback Alternate,Feedback incorrect,Points Correct,Points Alternate,show muscle trys
+0,Demonstrate the action of the Brachialis,11,32,0,,Correct! Great Job!,,try again!,10,0,0
+1,Demonstrate the action of the Pronator Teres,62,48,0,,Correct! Great Job!,,try again!,10,0,1
+2,Demonstrate the action of the Biceps Brachia,7,2080,0,,Correct! Great Job!,,try again!,10,0,2
+3,Demonstrate flexion of the wrist,0,8,0,,Correct! Great Job!,,try again!,10,0,0
+4,Demonstrate hyperextension of the wrist,0,4,0,,Correct! Great Job!,,try again!,10,0,0
+5,Demonstrate the action of the costal head of the pectoralis major,55,64,1,0,Correct! Great Job!,Yes but others,try again!,10,5,1
+6,Demonstrate the action of the scapular head of the deltoid,16,1280,0,,Correct! Great Job!,,try again!,10,0,0
+7,Demonstrate the action of the hamstrings group,44,2162688,0,,Correct! Great Job!,,try again!,10,0,1
+8,Demonstrate the action of the soleus,69,32768,0,,Correct! Great Job!,,try again!,10,0,0
+9,Demonstrate the action of the tibialis anterior,76,20480,0,,Correct! Great Job!,,try again!,10,0,0
