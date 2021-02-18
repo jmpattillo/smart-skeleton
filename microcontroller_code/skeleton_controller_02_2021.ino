@@ -1,10 +1,13 @@
 //By John M. Pattillo
+//before compiling and uploading, open Adafruit_BNO055.cpp and comment out "Wire.begin()"
+//once powered, WiFi network will be called "SmartSkeleton"
+//if password is requested, enter "smartskeleton"
 
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
 #include <WiFiClient.h>
 #include <Wire.h>
-#include <Adafruit_BNO055.h> //open Adafruit_BNO055.cpp and comment out "Wire.begin()"
+#include <Adafruit_BNO055.h> 
 
 //timing delays (determined empirically with a logic analyzer) TODO remeasure these for huzzah board
 #define SAMPLE_DELAY (5) //in ms
@@ -125,7 +128,7 @@ byte currentConfigSign = 0;
 //set up wireless access point
 
 const char *ssid = "SmartSkeleton";
-const char *password = "thereisnospoon";
+const char *password = "smartskeleton";
 
 WiFiUDP Udp;
 unsigned int localUdpPort = 4210;  // local port to listen on
