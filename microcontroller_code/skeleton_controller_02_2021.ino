@@ -1,5 +1,5 @@
 //By John M. Pattillo
-//Adafruit_BNO055.cpp has been modified from the original by commenting out "Wire.begin()"
+////before compiling and uploading, open Adafruit_BNO055.cpp and comment out "Wire.begin()"
 //once powered, WiFi network will be called "SmartSkeleton"
 //if password is requested, enter "smartskeleton"
 
