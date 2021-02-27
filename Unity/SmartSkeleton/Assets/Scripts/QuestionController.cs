@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.IO;
 
-public class QuestionController : MonoBehaviour
+public class QuestionController : MonoBehaviour 
 {
     
     public static QuestionController Instance;
@@ -139,7 +139,7 @@ public class QuestionController : MonoBehaviour
 
     //the answers are 32 bit integers whose binary forms represent a set of bit flags as described above
 
-    int[] answers = new int[] {
+    int[] answers = new int[] { //these answers were included for testing.  Answers are currently parsed from questions.csv
             32, //brachialis. elbow flexed, all other joints anatomical position (AP)
             48, //pronator teres.  elbow flexed, forearm pronated.  All other joints AP
             512, //tricpes brachia. Shoulder hyperextended.  All other joints AP
@@ -656,7 +656,7 @@ public class QuestionController : MonoBehaviour
             string[] row = rawQuestionList[i].Split(new char[] { ',' });
             Questions blah = new Questions(); //temporary question to hold each part while parsing
             int.TryParse(row[0], out blah.id);
-            blah.question = row[1];
+            blah.question = row[1].Replace("|",",");
             int.TryParse(row[2], out blah.mCode);
             int.TryParse(row[3], out blah.correct);
             int.TryParse(row[4], out blah.isAlternate);
