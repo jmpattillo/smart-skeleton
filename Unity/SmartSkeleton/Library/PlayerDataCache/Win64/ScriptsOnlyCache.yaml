@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - HipJoint
     - KneeJoint
     - QuestionController
+    - QuestionReset
     - RadiusJoint
     - ResponseController
     - Rotator
@@ -26,6 +27,7 @@ ScriptsOnlyBuild:
     - hipWarningController
     - kneeColor
     - kneeWarningController
+    - quit
     - raw_torso
     - scoreController
     - temp_rotate
@@ -39,7 +41,9 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
@@ -70,8 +74,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 0}
-    - Class: 114
       Script: {instanceID: 11248}
     - Class: 114
       Script: {instanceID: 11250}
@@ -87,6 +89,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11454}
     - Class: 114
       Script: {instanceID: 11494}
+    - Class: 114
+      Script: {instanceID: 11556}
     - Class: 114
       Script: {instanceID: 11644}
     - Class: 114
@@ -107,6 +111,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12116}
     - Class: 114
       Script: {instanceID: 12126}
+    - Class: 114
+      Script: {instanceID: 12254}
     - Class: 114
       Script: {instanceID: 12370}
     - Class: 114
@@ -137,6 +143,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13148}
     - Class: 114
       Script: {instanceID: 13160}
+    - Class: 114
+      Script: {instanceID: 17912}
+    - Class: 114
+      Script: {instanceID: 27586}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -408,7 +418,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 5cc439bf63c0539d39588e69465ac2ab
+      Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
@@ -552,7 +562,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 344a8c2e106a0a4e098e91a52e0af063
+      Hash: f0786811516f7de8befd7a3e181e567a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
@@ -784,7 +794,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: quit
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuestionReset
   platform: 19
   scenePathNames:
   - Assets/main.unity
-  playerPath: /Users/pattillo/Documents/Spring 2021/smart_skeleton_builds/Win64/SmartSkeleton/SmartSkeleton.exe
+  playerPath: /Users/pattillo/Documents/Summer 2021/Smartskeleton_builds/Win64/SmartSkeleton/SmartSkeleton.exe

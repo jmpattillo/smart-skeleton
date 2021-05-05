@@ -119,6 +119,7 @@ public class QuestionController : MonoBehaviour
     private bool leftShift;
 
     //TODO implement a more robust and flexible question system.  This set is a demonstration.
+    //DONE - added questions.csv method.  TODO Add setup page to replace questions.csv
 
     string[] questions = new string[] {
         "Demonstrate the action of the Brachialis",
@@ -266,7 +267,7 @@ public class QuestionController : MonoBehaviour
                     totalPoints += theseQuestions[questionNumber].pointsAlternate;
                     theseQuestions[questionNumber].alreadyAnswered = 1;
                 }
-                //t
+                //turn joint green?
 
             }
 
@@ -283,14 +284,14 @@ public class QuestionController : MonoBehaviour
                         showHideMuscle(theseQuestions[questionNumber].mCode);
                     }
                     muscleShowing = true;
-                }
+                } //turn joint red?
             }
             //myupperLimb = 0;
 
         }
 
         if ((Input.GetKeyDown (KeyCode.N)) && (questionState == 1)) { //next question
-                                                                      //TODO add recalibrate here
+                                                                      //TODO add recalibrate here  DONE
            // Rotator.Instance.resetCalibration();
             questionState = 0;
 
@@ -428,15 +429,15 @@ public class QuestionController : MonoBehaviour
         if (leftShift && Input.GetKeyDown(KeyCode.R)) 
         {
             resetQuestions();
-            if (muscleShowing) { showHideMuscle(theseQuestions[questionNumber].mCode); muscleShowing = false; }
-            if ((theseQuestions[questionNumber].numberOfTries) >= (theseQuestions[questionNumber].showMuscleTry))
-            {
-                showHideMuscle(theseQuestions[questionNumber].mCode);
-                muscleShowing = true;
-            }
-            text.color = Color.white;
+           // if (muscleShowing) { showHideMuscle(theseQuestions[questionNumber].mCode); muscleShowing = false; }
+           // if ((theseQuestions[questionNumber].numberOfTries) >= (theseQuestions[questionNumber].showMuscleTry))
+           // {
+           //     showHideMuscle(theseQuestions[questionNumber].mCode);
+           //     muscleShowing = true;
+           // }
+           // text.color = Color.white;
 
-            Debug.Log("resetting questions");
+           // Debug.Log("resetting questions");
         }
 
 
@@ -661,9 +662,9 @@ public class QuestionController : MonoBehaviour
             int.TryParse(row[3], out blah.correct);
             int.TryParse(row[4], out blah.isAlternate);
             int.TryParse(row[5], out blah.alternate);
-            blah.feebackCorrect = row[6];
-            blah.feebackAlternate = row[7];
-            blah.feedbackIncorrect = row[8];
+            blah.feebackCorrect = row[6].Replace("|",",");
+            blah.feebackAlternate = row[7].Replace("|",",");
+            blah.feedbackIncorrect = row[8].Replace("|",",");
             int.TryParse(row[9], out blah.pointsCorrect);
             int.TryParse(row[10], out blah.pointsAlternate);
             int.TryParse(row[11], out blah.showMuscleTry);
@@ -677,7 +678,7 @@ public class QuestionController : MonoBehaviour
         } 
     }
 
-    void resetQuestions () //reset all scores and number of tries
+    public void resetQuestions () //reset all scores and number of tries
     {
         for (int i = 0; i <= numberOfQuestions; i++) {
             theseQuestions[(i)].numberOfTries = 0;
@@ -687,7 +688,16 @@ public class QuestionController : MonoBehaviour
         }
         totalPoints = 0;
         scoreController.Instance.text.text = totalPoints.ToString();
-        
+        if (muscleShowing) { showHideMuscle(theseQuestions[questionNumber].mCode); muscleShowing = false; }
+        if ((theseQuestions[questionNumber].numberOfTries) >= (theseQuestions[questionNumber].showMuscleTry))
+        {
+            showHideMuscle(theseQuestions[questionNumber].mCode);
+            muscleShowing = true;
+        }
+        text.color = Color.white;
+
+        Debug.Log("resetting questions");
+
     }
 
 
